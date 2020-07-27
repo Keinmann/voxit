@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B2FC422-5765-4D58-B061-15C7881BBD57}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Fvox</RootNamespace>
+    <AssemblyName>Fvox</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'v0.02|AnyCPU'">
+    <OutputPath>bin\v0.02\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'v0.03|AnyCPU'">
+    <OutputPath>bin\v0.03\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SystemPower.cs" />
+    <Compile Include="win_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="win_main.Designer.cs">
+      <DependentUpon>win_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="win_main.resx">
+      <DependentUpon>win_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hev_shutdown.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\hl.ico" />
+    <Resource Include="sounds\acquired.wav" />
+    <Resource Include="sounds\activated.wav" />
+    <Resource Include="sounds\alert.wav" />
+    <Resource Include="sounds\am.wav" />
+    <Resource Include="sounds\beep.wav" />
+    <Resource Include="sounds\bell.wav" />
+    <Resource Include="sounds\boop.wav" />
+    <Resource Include="sounds\communications_on.wav" />
+    <Resource Include="sounds\danger.wav" />
+    <Resource Include="sounds\deactivated.wav" />
+    <Resource Include="sounds\east.wav" />
+    <Resource Include="sounds\eight.wav" />
+    <Resource Include="sounds\eighteen.wav" />
+    <Resource Include="sounds\eighty.wav" />
+    <Resource Include="sounds\eleven.wav" />
+    <Resource Include="sounds\fifteen.wav" />
+    <Resource Include="sounds\fifty.wav" />
+    <Resource Include="sounds\five.wav" />
+    <Resource Include="sounds\four.wav" />
+    <Resource Include="sounds\fourteen.wav" />
+    <Resource Include="sounds\fourty.wav" />
+    <Resource Include="sounds\hev_shutdown.wav" />
+    <Resource Include="sounds\hours.wav" />
+    <Resource Include="sounds\immediately.wav" />
+    <Resource Include="sounds\meters.wav" />
+    <Resource Include="sounds\minor_fracture.wav" />
+    <Resource Include="sounds\minor_lacerations.wav" />
+    <Resource Include="sounds\minutes.wav" />
+    <Resource Include="sounds\nine.wav" />
+    <Resource Include="sounds\nineteen.wav" />
+    <Resource Include="sounds\ninety.wav" />
+    <Resource Include="sounds\north.wav" />
+    <Resource Include="sounds\one.wav" />
+    <Resource Include="sounds\onehundred.wav" />
+    <Resource Include="sounds\online.wav" />
+    <Resource Include="sounds\pain_block.wav" />
+    <Resource Include="sounds\percent.wav" />
+    <Resource Include="sounds\pm.wav" />
+    <Resource Include="sounds\position.wav" />
+    <Resource Include="sounds\power_below.wav" />
+    <Resource Include="sounds\power_level_is.wav" />
+    <Resource Include="sounds\power_restored.wav" />
+    <Resource Include="sounds\remaining.wav" />
+    <Resource Include="sounds\safe_day.wav" />
+    <Resource Include="sounds\seconds.wav" />
+    <Resource Include="sounds\seven.wav" />
+    <Resource Include="sounds\seventeen.wav" />
+    <Resource Include="sounds\seventy.wav" />
+    <Resource Include="sounds\six.wav" />
+    <Resource Include="sounds\sixteen.wav" />
+    <Resource Include="sounds\sixty.wav" />
+    <Resource Include="sounds\south.wav" />
+    <Resource Include="sounds\ten.wav" />
+    <Resource Include="sounds\thirteen.wav" />
+    <Resource Include="sounds\thirty.wav" />
+    <Resource Include="sounds\three.wav" />
+    <Resource Include="sounds\time_is_now.wav" />
+    <Resource Include="sounds\time_remaining.wav" />
+    <Resource Include="sounds\twelve.wav" />
+    <Resource Include="sounds\twenty.wav" />
+    <Resource Include="sounds\twentyfive.wav" />
+    <Resource Include="sounds\two.wav" />
+    <Resource Include="sounds\voice_off.wav" />
+    <Resource Include="sounds\voice_on.wav" />
+    <Resource Include="sounds\warning.wav" />
+    <Resource Include="sounds\west.wav" />
+    <Resource Include="sounds\your.wav" />
+    <Resource Include="sounds\_comma.wav" />
+    <Resource Include="sounds\_period.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\voice_off.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\voice_on.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
